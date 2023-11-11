@@ -15,3 +15,7 @@ if __name__ == "__main__":
                         num_workers)
 
         val_loader_list = dataModule.val_dataloader_list()
+
+        train()
+
+        
