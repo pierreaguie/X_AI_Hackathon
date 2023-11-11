@@ -50,7 +50,30 @@ def evaluate(model, dataloader):
         file.write(f"Evaluation | val_loss_epoch: {epoch_loss}, val_acc: {epoch_acc} \n\n\n")
     print(f"Evaluation | val_loss_epoch: {epoch_loss}, val_acc: {epoch_acc} \n")
 
-def train():
+
+def train(model, device, dataloader, epoch, rate = 1e-4):
+
+    optimizer = torch.optim.Adam(model.parameters(), lr=rate)
+
+    loss_fn = nn.CrossEntropyLoss()
+    train_losses = []
+
+    for t in tqdm(range(epoch)):
+        for i, (input_data, target) in enumerate(dataloader):
+
+            input_data, target = input_data.to(device), target.to(device)
+
+            #on calcule la prediction 
+            y_pred = model(input_data)
+            loss = loss_fn(y_pred, target)
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+        train_losses.append(loss.detach().item())
+
+    return train_losses
+
+"""def train():
     global threshold
     
     loss_fn = torch.nn.functional.cross_entropy
@@ -153,7 +176,7 @@ def train():
                         file)
 
         # Save the model
-        torch.save(model.state_dict(), model_path)
+        torch.save(model.state_dict(), model_path)"""
 
 # Transform
 transform = transforms.Compose([
