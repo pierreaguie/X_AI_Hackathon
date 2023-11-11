@@ -40,3 +40,19 @@ class ConvNextFinetune(nn.Module):
         x = self.backbone(x).logits
         x = self.classifier(x)
         return x
+
+class BasicTransformer(nn.module):
+    """ Basic Transformer model"""
+    def __init__(self, num_classes, d_model):
+        super().__init__()
+
+        self.d_model = d_model
+
+        self.Linear1 = nn.Linear(64 * 64, d_model)
+        self.Transformer = nn.Transformer(d_model = d_model)
+        self.Linear2 = nn.Linear(d_model, num_classes)
+
+    def forward(self, x):
+        x = self.Linear1(x)
+        x = self.Transformer(x)
+        return self.Linear2(x)
