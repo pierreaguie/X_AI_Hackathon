@@ -24,7 +24,7 @@ st.markdown("---")
 
 st.markdown("## Comment utiliser CleanR? 🌍")
 
-st.markdown("Pour utiliser CleanR, il suffit de cliquer sur le bouton ci-dessous et de rentrer les coordonnées du site à surveiller dans la page mes points.")
+st.markdown("Pour utiliser CleanR, il suffit de rentrer les coordonnées des sites à surveiller sur la page 'mes points'.")
 
 st.markdown("---")
 
