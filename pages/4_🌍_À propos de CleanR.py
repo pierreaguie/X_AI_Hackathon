@@ -16,7 +16,7 @@ st.markdown("---")
 
 st.markdown("## Qu'est-ce que CleanR? 🌬️")
 
-st.markdown("CleanR est une application web qui suit les fuites de méthane à travers le monde avec l'IA NextGen. L'application est basée sur des données satellitaires prises en temps réel ou uploadée sur le site. L'application est développée par des étudiants de l'Ecole polytechnique.")
+st.markdown("CleanR est une application web qui suit les fuites de méthane à travers le monde avec une IA révolutionnaire. L'application est basée sur des données satellitaires prises en temps réel ou uploadée sur le site. L'application est développée par des étudiants de l'Ecole polytechnique.")
 
 st.markdown("---")
 
