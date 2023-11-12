@@ -1,3 +1,5 @@
+import streamlit as st
+
 st.title("A propos de CleanR")
 
 st.subheader("CleanR est une application web qui suit les fuites de méthane à travers le monde avec une IA révolutionnaire.")
