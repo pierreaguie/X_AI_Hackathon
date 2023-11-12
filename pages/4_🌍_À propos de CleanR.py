@@ -1,5 +1,18 @@
 import streamlit as st
 
+st.markdown("""
+<style>
+        .st-emotion-cache-zq5wmm.ezrtsby0
+        {
+            visibility: hidden;
+        }
+        .st-emotion-cache-cio0dv.ea3mdgi1
+        {
+            visibility: hidden;
+        }
+""", unsafe_allow_html=True)
+
+
 st.title("A propos de CleanR")
 
 st.subheader("CleanR est une application web qui suit les fuites de méthane à travers le monde avec une IA révolutionnaire.")
