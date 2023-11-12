@@ -19,7 +19,11 @@ st.markdown("""
         }
 """, unsafe_allow_html=True)
 
-# center on Liberty Bell, add marker
+
+st.title("🗺️ Carte")
+
+st.markdown("---")
+
 m = folium.Map(location=[0,0], zoom_start=1)
 
 
