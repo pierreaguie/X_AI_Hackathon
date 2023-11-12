@@ -1,7 +1,7 @@
 from models import *
 from data import *
 from train_ViT import *
-from parameters import *
+from config import *
 
 if __name__ == "__main__":
 
