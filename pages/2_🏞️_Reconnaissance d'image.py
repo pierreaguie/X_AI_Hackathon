@@ -5,6 +5,19 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
+st.markdown("""
+<style>
+        .st-emotion-cache-zq5wmm.ezrtsby0
+        {
+            visibility: hidden;
+        }
+        .st-emotion-cache-cio0dv.ea3mdgi1
+        {
+            visibility: hidden;
+        }
+""", unsafe_allow_html=True)
+
+
 st.title("🏞️ Reconnaissance d'image")
 
 st.write("Importez une image satellite pour détecter la présence d'un puits de méthane")
@@ -38,3 +51,4 @@ if upload is not None:
     plt.imshow(img, cmap='gray')
     plt.axis('off')
     st.pyplot()
+
