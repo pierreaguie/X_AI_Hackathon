@@ -4,6 +4,8 @@ import pandas as pd
 
 
 from streamlit_folium import folium_static
+import matplotlib.pyplot as plt
+from PIL import Image
 
 
 
