@@ -13,6 +13,8 @@ import keras
 import imageio
 from sklearn.utils import shuffle
 
+from data import *
+
 def cross_validate(nb_cross, X_train_tot, y_train_tot, X_validation, y_validation):
 
     """Met en oeuvre une cross_validation et enregistre et retourne une liste de modèles selectionnés selon find_model"""

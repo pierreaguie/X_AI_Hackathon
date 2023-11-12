@@ -13,6 +13,10 @@ import keras
 import imageio
 from sklearn.utils import shuffle
 
+from data import *
+from model import *
+from train import *
+
 
 dataset_path = "/kaggle/input/qb-3-axel/data"
 metadata_path = "/kaggle/input/qb-3-axel/data/metadata.csv"
