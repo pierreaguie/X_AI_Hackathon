@@ -7,11 +7,13 @@ from transformers import ConvNextForImageClassification
 
 class TransformerFinetune(nn.Module):
     """ Model using vit_b_16 as backbone with a linear classifier """
-    def __init__(self, num_classes, frozen = False):
+    def __init__(self, num_classes, pretrained = False, frozen = False, path = None):
         super().__init__()
         
-        self.backbone = torchvision.models.vit_b_16("ViT_B_16_Weights.DEFAULT")
+        self.backbone = torchvision.models.vit_b_16()
         self.backbone.heads = nn.Identity()
+        if pretrained:
+            self.backbone.load_state_dict(torch.load(path)())
         if frozen:
             for param in self.backbone.parameters():
                 param.requires_grad = False
@@ -23,21 +25,21 @@ class TransformerFinetune(nn.Module):
         x = self.classifier(x)
         return x
 
-class ConvNextFinetune(nn.Module):
-    """ Model using ConvNext as backbone with a linear classifier """
-    def __init__(self, num_classes, frozen = False):
+class ResNet(nn.Module):
+    def __init__(self,num_classes,pretrained = False, frozen = False, path = None):
         super().__init__()
         
-        self.backbone = ConvNextForImageClassification.from_pretrained("facebook/convnext-large-224")
-        self.backbone.classifier = nn.Identity()
+        self.backbone = torchvision.models.resnet18()
+        if pretrained:
+            self.backbone.load_state_dict(torch.load(path)())
         if frozen:
             for param in self.backbone.parameters():
                 param.requires_grad = False
-                
-        self.classifier = nn.Linear(1536, num_classes)
-
+        
+        self.classifier = nn.Linear(1000, num_classes)
+        
     def forward(self, x):
-        x = self.backbone(x).logits
+        x = self.backbone(x)
         x = self.classifier(x)
         return x
 
@@ -56,3 +58,4 @@ class BasicTransformer(nn.module):
         x = self.Linear1(x)
         x = self.Transformer(x)
         return self.Linear2(x)
+
