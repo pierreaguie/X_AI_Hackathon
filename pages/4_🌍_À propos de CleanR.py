@@ -19,7 +19,7 @@ st.subheader("CleanR est une application web qui suit les fuites de méthane à 
 
 st.markdown("---")
 
-st.image("data/images/methane.jpg")
+st.image("/Users/pierreaguie/X_AI_Hackathon/assets/methane.jpg")
 
 st.markdown("---")
 
