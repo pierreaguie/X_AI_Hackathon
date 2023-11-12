@@ -7,7 +7,17 @@ from streamlit_folium import folium_static
 import matplotlib.pyplot as plt
 from PIL import Image
 
-
+st.markdown("""
+<style>
+        .st-emotion-cache-zq5wmm.ezrtsby0
+        {
+            visibility: hidden;
+        }
+        .st-emotion-cache-cio0dv.ea3mdgi1
+        {
+            visibility: hidden;
+        }
+""", unsafe_allow_html=True)
 
 # center on Liberty Bell, add marker
 m = folium.Map(location=[0,0], zoom_start=1)
