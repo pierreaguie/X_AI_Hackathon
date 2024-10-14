@@ -1,6 +1,6 @@
 # X_AI_Hackathon
 
-Repository for the hackathon team #6 "Code with the bros"
+Repository pour le Hackathon Quantumblack X-IA 2024. Repo de l'équipe #6 "Code with the bros"
 
 Les dossiers .streamlit et assets permettent de coder la webapp. 
 Pour l'exécuter, exécuter la commande dans le terminal à l'emplacement du fichier accueil : streamlit run _Accueil.py
@@ -24,6 +24,3 @@ Dans ce dossier :
 
 Types de modèle:
  - ResNet, VisionTransformer, 2 CNN basiques différents, basicTransformer
-
-Pour la métrique, nous avons comparé les différents modèles avec leur accuracy sur test set. 
-
