@@ -24,3 +24,6 @@ Dans ce dossier :
 
 Types de modèle:
  - ResNet, VisionTransformer, 2 CNN basiques différents, basicTransformer
+
+
+NB: Le dataset d'entraînement (dossier `data`) fourni par QuantumBlack a été volontairement retiré de ce repository.
