@@ -13,7 +13,7 @@ import keras
 import imageio
 from sklearn.utils import shuffle
 
-from data import *
+from pipeline.data import data_augmentation
 
 def cross_validate(nb_cross, X_train_tot, y_train_tot, X_validation, y_validation):
 
